@@ -1,8 +1,14 @@
 # DOCKER SEHARI-HARI
 
-## Instalasi di Ubuntu 18.04. [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- [Instalasi](#instalasi)
+- [Pasca Instalasi](#pasca-instalasi)
+- [Image](#image)
+- [Kontainer](#kontainer)
 
-##### Instalasi
+## Instalasi
+
+##### Instalasi di Ubuntu 18.04. [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
 1. update database apt
 2. install apt-transport-https ca-certificates
 3. tambahkan GPG key resmi docker
@@ -36,7 +42,8 @@ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> c
     sudo docker info
     sudo docker run hello-world
 
-## Pasca Instalasi di Ubuntu 18.04. [link](https://docs.docker.com/install/linux/linux-postinstall/)
+## Pasca Instalasi
+[link](https://docs.docker.com/install/linux/linux-postinstall/)
 
 ##### Manage docker sebagai user non-root
 1. membuat group `docker` dengan perintah linux `groupadd`
@@ -49,7 +56,8 @@ sudo usermod -aG docker [USERNAME]
 
     docker run hello-world
     
-## Image [link](https://docs.docker.com/engine/reference/commandline/images/)
+## Image
+[link](https://docs.docker.com/engine/reference/commandline/images/)
 
 ##### Membuat image. [link](https://docs.docker.com/engine/reference/commandline/build/)
 
@@ -102,3 +110,5 @@ docker history [nama_image]
 ```sh
 docker images
 ```
+
+## Kontainer
