@@ -1,6 +1,6 @@
 # DOCKER SEHARI-HARI
 
-## Instalasi di Ubuntu 18.04 [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+## Instalasi di Ubuntu 18.04. [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ##### Instalasi
 1. update database apt
@@ -36,7 +36,7 @@ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> c
     sudo docker info
     sudo docker run hello-world
 
-## Pasca Instalasi di Ubuntu 18.04 [link](https://docs.docker.com/install/linux/linux-postinstall/)
+## Pasca Instalasi di Ubuntu 18.04. [link](https://docs.docker.com/install/linux/linux-postinstall/)
 
 ##### Manage docker sebagai user non-root
 1. membuat group `docker` dengan perintah linux `groupadd`
@@ -49,3 +49,56 @@ sudo usermod -aG docker [USERNAME]
 
     docker run hello-world
     
+## Image
+
+##### Membuat image. [link](https://docs.docker.com/engine/reference/commandline/build/)
+
+> Buat direktori project dan buat file `Dockerfile`
+
+```sh
+docker build -t [nama_image:tag] .
+```
+>jangan lupa tanda . (titik) untuk direktori dockerfile saat ini.
+
+
+##### Mengambil image dari repositori docker hub. [link](https://docs.docker.com/engine/reference/commandline/pull/)
+```sh
+docker pull [nama_image]
+```
+##### Menyimpan image. [link](https://docs.docker.com/engine/reference/commandline/save/)
+- save ke file langsung atau
+- save ke file dengan opsi `-o` atau
+- save ke file dengan opsi `--output` atau
+- save ke file image versi tertentu.
+
+```sh
+docker save [nama_image] > nama_file_image.tar
+docker save -o nama_file_image.tar [nama_image]
+docker save --output nama_file_image.tar [nama_image]
+docker save --output nama_file_image.tar [nama_image:tag]
+```
+
+##### Mengirim image ke repositori docker hub. [link](https://docs.docker.com/engine/reference/commandline/push/)
+```sh
+docker push [username/nama_image]
+```
+
+##### Mencari istilah tertentu di repositori docker hub. [link](https://docs.docker.com/engine/reference/commandline/search/)
+```sh
+docker search [keyword]
+```
+
+##### Membuat atau menambahkan tag kedalam image sumber. [link](https://docs.docker.com/engine/reference/commandline/tag/)
+```sh
+docker tag [source] [target]
+```
+
+##### Menampilkan history image. [link](https://docs.docker.com/engine/reference/commandline/history/)
+```sh
+docker history [nama_image]
+```
+
+##### Menampilkan daftar image yang disimpan didalam sistem. [link](https://docs.docker.com/engine/reference/commandline/images/)
+```sh
+docker images
+```
