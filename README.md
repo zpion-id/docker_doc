@@ -49,7 +49,7 @@ sudo usermod -aG docker [USERNAME]
 
     docker run hello-world
     
-## Image
+## Image [link](https://docs.docker.com/engine/reference/commandline/images/)
 
 ##### Membuat image. [link](https://docs.docker.com/engine/reference/commandline/build/)
 
