@@ -29,15 +29,15 @@ docker pull [nama_image]
 
 - save ke file langsung
 ```sh
-docker save <nama_image[:tag]> > nama_file_image.tar
+docker save nama_image[:tag] > nama_file_image.tar
 ```
 - save ke file dengan opsi`-o`
 ```sh
-docker save -o nama_file_image.tar <nama_image[:tag]>
+docker save -o nama_file_image.tar nama_image[:tag]
 ```
 - save ke file dengan opsi `--output`
 ```sh
-docker save --output nama_file_image.tar <nama_image[:tag]>
+docker save --output nama_file_image.tar nama_image[:tag]
 ```
 
 ##### Mengirim image ke repositori docker hub. [link](https://docs.docker.com/engine/reference/commandline/push/)
