@@ -1,16 +1,15 @@
 # DOCKER SEHARI-HARI
 
-[Instalasi](https://github.com/zpion-id/docker_doc/blob/master/Instalasi_Docker.md)
+| [Instalasi](https://github.com/zpion-id/docker_doc/blob/master/Instalasi_Docker.md)
+| [Dockerfile]()
+| [Image]()
+| [Container]()
+| [Volume]()
+| [Network]()
+|
 ---
 
-Daftar isi :
-- [Image](#image)
-- [Container](#container)
-- [Volume]()
-- [Network]()
-
-## Image
-[link](https://docs.docker.com/engine/reference/commandline/images/)
+## Image [link](https://docs.docker.com/engine/reference/commandline/images/)
 
 ##### Membuat image. [link](https://docs.docker.com/engine/reference/commandline/build/)
 
@@ -27,16 +26,18 @@ docker build -t [nama_image:tag] .
 docker pull [nama_image]
 ```
 ##### Menyimpan image. [link](https://docs.docker.com/engine/reference/commandline/save/)
-- save ke file langsung atau
-- save ke file dengan opsi `-o` atau
-- save ke file dengan opsi `--output` atau
-- save ke file image versi tertentu.
 
+- save ke file langsung
 ```sh
-docker save [nama_image] > nama_file_image.tar
-docker save -o nama_file_image.tar [nama_image]
-docker save --output nama_file_image.tar [nama_image]
-docker save --output nama_file_image.tar [nama_image:tag]
+docker save <nama_image[:tag]> > nama_file_image.tar
+```
+- save ke file dengan opsi`-o`
+```sh
+docker save -o nama_file_image.tar <nama_image[:tag]>
+```
+- save ke file dengan opsi `--output`
+```sh
+docker save --output nama_file_image.tar <nama_image[:tag]>
 ```
 
 ##### Mengirim image ke repositori docker hub. [link](https://docs.docker.com/engine/reference/commandline/push/)
@@ -68,10 +69,11 @@ docker images
 
 ##### Membuat container baru dari image
 - membuat container langsung
-- membuat container dan memberinya nama
-
 ```sh
 docker create [nama_image]
+```
+- membuat container dan memberinya nama
+```sh
 docker create --name [nama-container] [nama_image]
 ```
 
@@ -80,12 +82,13 @@ docker create --name [nama-container] [nama_image]
 docker start [container]
 ```
 
-##### Melihat daftar container
-- yang sedang berjalan
-- yang sedang berjalan dan berhenti.
-
+##### Daftar container
+- container yang sedang berjalan  
 ```sh
 docker ps
+```
+- semua container 
+```sh
 docker ps -a
 ```
 
