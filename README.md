@@ -10,39 +10,71 @@
 ---
 
 ## Image [link](https://docs.docker.com/engine/reference/commandline/images/)
+Command yang berhubungan dengan image :
+
+| Command | Link |
+|-------|-----|
+|build | https://docs.docker.com/engine/reference/commandline/build/ |
+|history | https://docs.docker.com/engine/reference/commandline/history/ |
+|images | https://docs.docker.com/engine/reference/commandline/images/ |
+|import | https://docs.docker.com/engine/reference/commandline/import/ |
+|info | https://docs.docker.com/engine/reference/commandline/info/ |
+|inspect | https://docs.docker.com/engine/reference/commandline/inspect/ |
+|load | https://docs.docker.com/engine/reference/commandline/load/ |
+|pull | https://docs.docker.com/engine/reference/commandline/pull/ |
+|push | https://docs.docker.com/engine/reference/commandline/push/ |
+|rmi | https://docs.docker.com/engine/reference/commandline/rmi/ |
+|save | https://docs.docker.com/engine/reference/commandline/save/ |
+|search | https://docs.docker.com/engine/reference/commandline/search/ |
+|tag | https://docs.docker.com/engine/reference/commandline/tag/ |
 
 ##### Membuat image. [link](https://docs.docker.com/engine/reference/commandline/build/)
 
 > Buat direktori project dan buat file `Dockerfile`
 
 ```sh
-docker build -t [nama_image:tag] .
+docker build -t [usrname/]nama_image[:tag] lokasi/dockerfile
 ```
->jangan lupa tanda . (titik) untuk direktori dockerfile saat ini.
+>tanda . (titik) untuk direktori dockerfile saat ini
 
+```sh
+docker build -t [usrname/]nama_image[:tag] .
+```
 
 ##### Mengambil image dari repositori docker hub. [link](https://docs.docker.com/engine/reference/commandline/pull/)
 ```sh
-docker pull [nama_image]
+docker pull [usrname/]nama_image[:tag]
 ```
-##### Menyimpan image. [link](https://docs.docker.com/engine/reference/commandline/save/)
+##### Menyimpan dan load image. [link](https://docs.docker.com/engine/reference/commandline/save/)
 
 - save ke file langsung
 ```sh
-docker save nama_image[:tag] > nama_file_image.tar
+docker save [usrname/]nama_image[:tag] > nama_file_image.tar
 ```
 - save ke file dengan opsi`-o`
 ```sh
-docker save -o nama_file_image.tar nama_image[:tag]
+docker save -o nama_file_image.tar [usrname/]nama_image[:tag]
 ```
 - save ke file dengan opsi `--output`
 ```sh
-docker save --output nama_file_image.tar nama_image[:tag]
+docker save --output nama_file_image.tar [usrname/]nama_image[:tag]
+```
+
+- restore image
+```sh
+docker load < lokasi/file_image.tar
+docker load -i lokasi/file_image.tar
+ ```
+
+##### Menghapus image dari lokal registry
+```sh
+docker rmi [usrname/]nama_image[:tag]
 ```
 
 ##### Mengirim image ke repositori docker hub. [link](https://docs.docker.com/engine/reference/commandline/push/)
 ```sh
-docker push [username/nama_image]
+docker push [usrname/]nama_image[:tag]
+docker push [registry/][username/]image-name[:tag]
 ```
 
 ##### Mencari istilah tertentu di repositori docker hub. [link](https://docs.docker.com/engine/reference/commandline/search/)
@@ -52,12 +84,15 @@ docker search [keyword]
 
 ##### Membuat atau menambahkan tag kedalam image sumber. [link](https://docs.docker.com/engine/reference/commandline/tag/)
 ```sh
-docker tag [source] [target]
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+docker tag IMAGE_ID username/new_image_name:tag
+docker tag IMAGE_NAME username/new_image_name:tag
+docker tag image-name[:tag][username/]new-image-name[:new-tag]
 ```
 
 ##### Menampilkan history image. [link](https://docs.docker.com/engine/reference/commandline/history/)
 ```sh
-docker history [nama_image]
+docker history [usrname/]nama_image[:tag]
 ```
 
 ##### Menampilkan daftar image yang disimpan didalam sistem. [link](https://docs.docker.com/engine/reference/commandline/images/)
@@ -66,6 +101,34 @@ docker images
 ```
 
 ## Container
+Command yang berhubungan dengan container :
+
+| Command | Link |
+|-------|-----|
+|daemon | https://docs.docker.com/engine/reference/commandline/dockerd/
+|attach | https://docs.docker.com/engine/reference/commandline/attach/ 
+|commit | https://docs.docker.com/engine/reference/commandline/commit/ 
+|cp | https://docs.docker.com/engine/reference/commandline/cp/ 
+|create | https://docs.docker.com/engine/reference/commandline/create/
+|diff | https://docs.docker.com/engine/reference/commandline/diff/
+|exec | https://docs.docker.com/engine/reference/commandline/exec/
+|export | https://docs.docker.com/engine/reference/commandline/export/
+|kill | https://docs.docker.com/engine/reference/commandline/kill/
+|logs | https://docs.docker.com/engine/reference/commandline/logs/
+|pause | https://docs.docker.com/engine/reference/commandline/pause/
+|port | https://docs.docker.com/engine/reference/commandline/port/
+|ps | https://docs.docker.com/engine/reference/commandline/ps/
+|rename | https://docs.docker.com/engine/reference/commandline/rename/
+|restart | https://docs.docker.com/engine/reference/commandline/restart/
+|rm | https://docs.docker.com/engine/reference/commandline/rm/
+|run | https://docs.docker.com/engine/reference/commandline/run/
+|start | https://docs.docker.com/engine/reference/commandline/start/
+|stats | https://docs.docker.com/engine/reference/commandline/stats/
+|stop | https://docs.docker.com/engine/reference/commandline/stop/
+|top | https://docs.docker.com/engine/reference/commandline/top/
+|unpause | https://docs.docker.com/engine/reference/commandline/unpause/
+|update | https://docs.docker.com/engine/reference/commandline/update/
+|wait | https://docs.docker.com/engine/reference/commandline/wait/
 
 ##### Membuat container baru dari image
 - membuat container langsung
