@@ -12,21 +12,19 @@
 ## Image [link](https://docs.docker.com/engine/reference/commandline/images/)
 Command yang berhubungan dengan image :
 
-| Command | Link |
-|-------|-----|
-|build | https://docs.docker.com/engine/reference/commandline/build/ |
-|history | https://docs.docker.com/engine/reference/commandline/history/ |
-|images | https://docs.docker.com/engine/reference/commandline/images/ |
-|import | https://docs.docker.com/engine/reference/commandline/import/ |
-|info | https://docs.docker.com/engine/reference/commandline/info/ |
-|inspect | https://docs.docker.com/engine/reference/commandline/inspect/ |
-|load | https://docs.docker.com/engine/reference/commandline/load/ |
-|pull | https://docs.docker.com/engine/reference/commandline/pull/ |
-|push | https://docs.docker.com/engine/reference/commandline/push/ |
-|rmi | https://docs.docker.com/engine/reference/commandline/rmi/ |
-|save | https://docs.docker.com/engine/reference/commandline/save/ |
-|search | https://docs.docker.com/engine/reference/commandline/search/ |
-|tag | https://docs.docker.com/engine/reference/commandline/tag/ |
+| [build](https://docs.docker.com/engine/reference/commandline/build/) |
+[history](https://docs.docker.com/engine/reference/commandline/history/) |
+[images](https://docs.docker.com/engine/reference/commandline/images/) |
+[import](https://docs.docker.com/engine/reference/commandline/import/) |
+[info](https://docs.docker.com/engine/reference/commandline/info/) |
+[inspect](https://docs.docker.com/engine/reference/commandline/inspect/) |
+[load](https://docs.docker.com/engine/reference/commandline/load/) |
+[pull](https://docs.docker.com/engine/reference/commandline/pull/) |
+[push](https://docs.docker.com/engine/reference/commandline/push/) |
+[rmi](https://docs.docker.com/engine/reference/commandline/rmi/) |
+[save](https://docs.docker.com/engine/reference/commandline/save/) |
+[search](https://docs.docker.com/engine/reference/commandline/search/) |
+[tag](https://docs.docker.com/engine/reference/commandline/tag/) |
 
 ##### Membuat image. [link](https://docs.docker.com/engine/reference/commandline/build/)
 
@@ -103,32 +101,31 @@ docker images
 ## Container
 Command yang berhubungan dengan container :
 
-| Command | Link |
-|-------|-----|
-|daemon | https://docs.docker.com/engine/reference/commandline/dockerd/
-|attach | https://docs.docker.com/engine/reference/commandline/attach/ 
-|commit | https://docs.docker.com/engine/reference/commandline/commit/ 
-|cp | https://docs.docker.com/engine/reference/commandline/cp/ 
-|create | https://docs.docker.com/engine/reference/commandline/create/
-|diff | https://docs.docker.com/engine/reference/commandline/diff/
-|exec | https://docs.docker.com/engine/reference/commandline/exec/
-|export | https://docs.docker.com/engine/reference/commandline/export/
-|kill | https://docs.docker.com/engine/reference/commandline/kill/
-|logs | https://docs.docker.com/engine/reference/commandline/logs/
-|pause | https://docs.docker.com/engine/reference/commandline/pause/
-|port | https://docs.docker.com/engine/reference/commandline/port/
-|ps | https://docs.docker.com/engine/reference/commandline/ps/
-|rename | https://docs.docker.com/engine/reference/commandline/rename/
-|restart | https://docs.docker.com/engine/reference/commandline/restart/
-|rm | https://docs.docker.com/engine/reference/commandline/rm/
-|run | https://docs.docker.com/engine/reference/commandline/run/
-|start | https://docs.docker.com/engine/reference/commandline/start/
-|stats | https://docs.docker.com/engine/reference/commandline/stats/
-|stop | https://docs.docker.com/engine/reference/commandline/stop/
-|top | https://docs.docker.com/engine/reference/commandline/top/
-|unpause | https://docs.docker.com/engine/reference/commandline/unpause/
-|update | https://docs.docker.com/engine/reference/commandline/update/
-|wait | https://docs.docker.com/engine/reference/commandline/wait/
+
+| [daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) |
+[attach](https://docs.docker.com/engine/reference/commandline/attach/) |
+[commit](https://docs.docker.com/engine/reference/commandline/commit/) |
+[cp](https://docs.docker.com/engine/reference/commandline/cp/) |
+[create](https://docs.docker.com/engine/reference/commandline/create/) |
+[diff](https://docs.docker.com/engine/reference/commandline/diff/) |
+[exec](https://docs.docker.com/engine/reference/commandline/exec/) |
+[export](https://docs.docker.com/engine/reference/commandline/export/) |
+[kill](https://docs.docker.com/engine/reference/commandline/kill/) |
+[logs](https://docs.docker.com/engine/reference/commandline/logs/) |
+[pause](https://docs.docker.com/engine/reference/commandline/pause/) |
+[port](https://docs.docker.com/engine/reference/commandline/port/) |
+[ps](https://docs.docker.com/engine/reference/commandline/ps/) |
+[rename](https://docs.docker.com/engine/reference/commandline/rename/) |
+[restart](https://docs.docker.com/engine/reference/commandline/restart/) |
+[rm](https://docs.docker.com/engine/reference/commandline/rm/) |
+[run](https://docs.docker.com/engine/reference/commandline/run/) |
+[start](https://docs.docker.com/engine/reference/commandline/start/) |
+[stats](https://docs.docker.com/engine/reference/commandline/stats/) |
+[stop](https://docs.docker.com/engine/reference/commandline/stop/) |
+[top](https://docs.docker.com/engine/reference/commandline/top/) |
+[unpause](https://docs.docker.com/engine/reference/commandline/unpause/) |
+[update](https://docs.docker.com/engine/reference/commandline/update/) |
+[wait](https://docs.docker.com/engine/reference/commandline/wait/) |
 
 ##### Membuat container baru dari image
 - membuat container langsung
